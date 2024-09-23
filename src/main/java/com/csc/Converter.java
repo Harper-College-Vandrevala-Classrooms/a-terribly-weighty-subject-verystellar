@@ -26,4 +26,23 @@ public class Converter {
     String s = String.valueOf(lb) + unit + String.valueOf(oz) + " oz";
     return s;
   }
+
+  public String toPounds(){
+    return toPounds(0);
+  }
+  public String toPoundsAndOunces(){
+    return toPoundsAndOunces(0);
+  }
+
+  public String toOunces(int pounds, int ounces) {
+    int oz = ounces + pounds*16;
+    String unit;
+    if (oz == 1 ){
+      unit = " ounce";
+    } else {
+      unit = " ounces";
+    }
+    String s = String.valueOf(oz) + unit;
+    return s;
+  }
 }
